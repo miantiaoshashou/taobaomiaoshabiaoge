@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>淘宝秒杀小助手</title>
+  <style>
+    body {
+      width: 600px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .table-actions {
+      margin: 10px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .filter-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    select {
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: white;
+    }
+    .copy-button {
+      background-color: #2196F3;
+    }
+    .copy-button:hover {
+      background-color: #1976D2;
+    }
+    .filter-button {
+      background-color: #4CAF50;
+    }
+    .filter-button:hover {
+      background-color: #45a049;
+    }
+    .reset-button {
+      background-color: #f44336;
+    }
+    .reset-button:hover {
+      background-color: #d32f2f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .table-container {
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+    .footer {
+      margin-top: 20px;
+      padding: 10px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+      border-top: 1px solid #eee;
+    }
+    .footer a {
+      color: #2196F3;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>淘宝秒杀小助手</h2>
+  <div class="table-actions">
+    <div class="filter-container">
+      <select id="statusFilter">
+        <option value="">全部状态</option>
+        <option value="清退">清退</option>
+        <option value="审核中">审核中</option>
+        <option value="已通过">已通过</option>
+        <option value="已拒绝">已拒绝</option>
+      </select>
+      <button id="filterButton" class="filter-button">筛选</button>
+      <button id="resetButton" class="reset-button">重置</button>
+    </div>
+    <button id="copyTableButton" class="copy-button">复制表格</button>
+  </div>
+  <div class="table-container">
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>商品ID</th>
+          <th>营销ID</th>
+          <th>活动状态</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer">
+    <p>作者 QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=943226915&site=qq&menu=yes" target="_blank">943226915</a></p>
+    <p>插件定制 | 脚本定制 | 电商自动化开发</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

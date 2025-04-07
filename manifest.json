@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "淘宝秒杀小助手",
+  "version": "1.0",
+  "description": "为淘宝商家提供的秒杀活动小工具",
+  "permissions": [
+    "webRequest",
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.taobao.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.taobao.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
